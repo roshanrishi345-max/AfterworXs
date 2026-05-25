@@ -60,10 +60,11 @@ nav{
 /* ===== HERO ===== */
 .hero{
   min-height:100vh;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:120px 56px 80px;
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  padding:100px 56px 60px;
   position:relative;overflow:hidden;
   background:var(--dark);
+  gap:0;
 }
 
 /* Animated grid background */
@@ -90,19 +91,19 @@ nav{
 .obj{position:absolute;pointer-events:none;}
 
 /* Vintage Camera SVG */
-.obj-camera{right:52%;top:12%;animation:float1 6s ease-in-out infinite;}
+.obj-camera{right:4%;top:18%;animation:float1 6s ease-in-out infinite;}
 @keyframes float1{0%,100%{transform:translateY(0) rotate(-4deg);}50%{transform:translateY(-14px) rotate(-2deg);}}
 
 /* Mac Monitor SVG */
-.obj-mac{right:8%;top:15%;animation:float2 7s ease-in-out infinite;}
-@keyframes float2{0%,100%{transform:translateY(0) rotate(3deg);}50%{transform:translateY(-18px) rotate(1deg);}}
+.obj-mac{right:2%;top:48%;animation:float2 7s ease-in-out infinite;}
+@keyframes float2{0%,100%{transform:translateY(0) rotate(2deg);}50%{transform:translateY(-18px) rotate(0deg);}}
 
 /* AE Badge */
-.obj-ae{right:38%;bottom:18%;animation:float3 5s ease-in-out infinite;}
+.obj-ae{right:22%;top:20%;animation:float3 5s ease-in-out infinite;}
 @keyframes float3{0%,100%{transform:translateY(0) rotate(-6deg);}50%{transform:translateY(-10px) rotate(-3deg);}}
 
 /* CapCut Badge */
-.obj-cap{right:18%;bottom:22%;animation:float4 6.5s ease-in-out infinite;}
+.obj-cap{right:22%;top:55%;animation:float4 6.5s ease-in-out infinite;}
 @keyframes float4{0%,100%{transform:translateY(0) rotate(5deg);}50%{transform:translateY(-12px) rotate(2deg);}}
 
 /* Film strip */
@@ -110,7 +111,8 @@ nav{
 @keyframes float5{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 
 /* HERO CONTENT */
-.hero-content{position:relative;z-index:2;max-width:680px;}
+.hero-content{position:relative;z-index:2;max-width:560px;}
+.hero-right-col{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;height:100%;}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;
